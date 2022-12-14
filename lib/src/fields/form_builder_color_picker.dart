@@ -194,7 +194,7 @@ class FormBuilderColorPickerFieldState
     super.initState();
     _effectiveController = widget.controller ?? TextEditingController();
     _effectiveController.text = valueString ?? '';
-    effectiveFocusNode.addListener(_handleFocus);
+    effectiveFocusNode?.addListener(_handleFocus);
   }
 
   @override
