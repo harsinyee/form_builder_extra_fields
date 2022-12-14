@@ -199,7 +199,7 @@ class FormBuilderColorPickerFieldState
 
   @override
   void dispose() {
-    effectiveFocusNode.removeListener(_handleFocus);
+    effectiveFocusNode?.removeListener(_handleFocus);
     // Dispose the _effectiveController when initState created it
     if (null == widget.controller) {
       _effectiveController.dispose();
