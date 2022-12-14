@@ -192,7 +192,7 @@ class FormBuilderCupertinoDateTimePickerState extends FormBuilderFieldState<
     final initialVal = initialValue;
     _textFieldController.text =
         initialVal == null ? '' : _dateFormat.format(initialVal);
-    effectiveFocusNode.addListener(_handleFocus);
+    effectiveFocusNode?.addListener(_handleFocus);
   }
 
   @override
@@ -205,8 +205,8 @@ class FormBuilderCupertinoDateTimePickerState extends FormBuilderFieldState<
   }
 
   Future<void> _handleFocus() async {
-    if (effectiveFocusNode.hasFocus && enabled) {
-      effectiveFocusNode.unfocus();
+    if (effectiveFocusNode?.hasFocus == true && enabled) {
+      effectiveFocusNode?.unfocus();
       await onShowPicker(context, value);
     }
   }
